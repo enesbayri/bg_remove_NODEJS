@@ -1,0 +1,86 @@
+
+<div class="card" id="AnaCard">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content columns is-vcentered ">
+
+        <p class="title is-4 pl-2 pb-0 is-size-1">
+          <i class="fa-brands fa-unsplash"></i>
+          
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="block"></div>
+  <% if (typeof remove_bg != "undefined") { %>
+      <div class="card-content ">
+
+        <div class="media">
+          <div class="block" id="removedBg">
+            <img src="<%=remove_bg %>">
+          </figure>
+      </div> 
+      <div class="block"></div>
+  <% } else { %>
+   
+  <form id="form" enctype="multipart/form-data" method="post" action="/upload">
+  <div class="card-content ">
+
+    <div class="media">
+      <div class="file is-boxed is-link" id="fileBox">
+        <label class="file-label">
+          <input class="file-input" type="file"  name="image" accept="video,image/jpg" id="file-input">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Choose a file…
+            </span>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div> 
+  <div class="block"></div>
+  
+  <div class="card-content">
+
+    <div class="media">
+        <div class="block" id="infoText">
+          <b><p id="selected-clip"> Supported formats: .jpg , .jpeg , .png </p></b>
+        </div>
+
+      
+  
+      
+    </div>
+  </div>
+
+  <div class="card-content">
+
+    <div class="media">
+        <button type="submit" class="button is-link is-outlined" id="uploadButton">
+          <span class="icon">
+            <i class="fa-solid fa-upload"></i>
+          </span>
+          <span>Upload Clip</span>
+        </button>
+
+      
+  
+      
+    </div>
+  </div>
+</form>
+<% } %>
+
+
+
+  
+
+
+
+</div>
